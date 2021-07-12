@@ -8,6 +8,7 @@ $number_button_height_narrow_screen: 38px;
 .main {
     display: grid;
     padding: 10px;
+    margin-bottom: 50px;
     grid-template-columns: 40% 60%;
     grid-template-rows: repeat(2, minmax(100px, max-content));
     grid-template-areas: "numbers-div   board-div"
@@ -66,7 +67,7 @@ $number_button_height_narrow_screen: 38px;
     padding-top: 30px;
 
     input[type="button"], button {
-        width: 140px;
+        width: 100px;
         height: $number_button_height_wide_screen;
         margin: 5px;
     }

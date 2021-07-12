@@ -159,7 +159,7 @@ const Sudoku = () => {
             </section>
             <section id="control-table">
                 <input type="button" value="Clear board" onClick={clearBoard} />
-                <input type="button" value="Give me the answer" onClick={produceSolution} />
+                <input type="button" value="Solve it" onClick={produceSolution} />
             </section>
         </div>
     )
