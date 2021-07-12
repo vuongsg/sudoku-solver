@@ -1,0 +1,109 @@
+$number_button_width_wide_screen: 70px;
+$number_button_height_wide_screen: 70px;
+$number_button_width_medium_screen: 50px;
+$number_button_height_medium_screen: 50px;
+$number_button_width_narrow_screen: 38px;
+$number_button_height_narrow_screen: 38px;
+
+.main {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(2, minmax(100px, max-content));
+    grid-template-areas: "numbers-div   board-div"
+                         "calculate-div calculate-div";
+}
+
+#numbers-div {
+    grid-area: numbers-div;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    input[type="button"], button {
+        width: $number_button_width_wide_screen;
+        height: $number_button_height_wide_screen;
+        margin: 5px;
+        cursor: pointer;
+    }
+}
+
+#board-div {
+    grid-area: board-div;
+    text-align: center;
+    display: grid;
+    //grid-column: repeat(9, minmax(50px, 1fr));
+    grid-auto-rows: auto;
+
+    .num-cell {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: $number_button_width_wide_screen;
+        height: $number_button_height_wide_screen;
+        margin: 3px;
+        border: 1px solid rgb(22, 185, 77);
+        vertical-align: top;    // keep element not shift down after changing innerHTML
+        //grid-column: 1 / span 1;
+
+        &:hover {
+            background: #454545;
+            color: #fff;
+        }
+    }
+}
+
+.row {
+    grid-row: auto;
+    grid-column: 1 / span all;
+}
+
+#control-table {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+
+    input[type="button"], button {
+        width: 140px;
+        height: $number_button_height_wide_screen;
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    #numbers-div {
+        input[type="button"], button {
+            width: $number_button_width_medium_screen;
+            height: $number_button_height_medium_screen;
+            margin: 3px;
+        }
+    }
+
+    #board-div {
+        .num-cell {
+            width: $number_button_width_medium_screen;
+            height: $number_button_height_medium_screen;
+            margin: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #numbers-div {
+        input[type="button"], button {
+            width: $number_button_width_narrow_screen;
+            height: $number_button_height_narrow_screen;
+            margin: 2px;
+        }
+    }
+
+    #board-div {
+        .num-cell {
+            width: $number_button_width_narrow_screen;
+            height: $number_button_height_narrow_screen;
+            margin: 2px;
+        }
+    }
+}
