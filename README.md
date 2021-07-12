@@ -1,9 +1,6 @@
 # Sudoku solver
 You're getting stuck while playing Sudoku. Just use this app for solving problem.
 
-## How to use
-Run index.html and play with it.
-
 ## Technologies
 - ReactJS
 - Redux
