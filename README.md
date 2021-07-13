@@ -1,6 +1,15 @@
 # Sudoku solver
 You're getting stuck while playing Sudoku? Just use this app for solving problem.
 
+## Running
+```
+npm start
+```
+or
+```
+yarn start
+```
+
 ## Technologies
 - ReactJS
 - Redux
