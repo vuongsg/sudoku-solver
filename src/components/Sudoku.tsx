@@ -9,10 +9,6 @@ const Sudoku = () => {
     let board = useSelector<RootType>(state => state.sudoku) as string[][];
 
     useEffect(() => {
-        document.title = "Sudoku solver";
-    }, []);
-
-    useEffect(() => {
         /**
      * Display board to UI
      * @returns 
