@@ -34,7 +34,7 @@ $number_button_height_narrow_screen: 38px;
     text-align: center;
     display: grid;
     //grid-column: repeat(9, minmax(50px, 1fr));
-    grid-auto-rows: auto;
+    grid-auto-rows: minmax(auto, max-content);
 
     .num-cell {
         display: inline-flex;
